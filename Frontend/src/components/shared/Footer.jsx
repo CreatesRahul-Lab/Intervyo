@@ -18,6 +18,8 @@ export default function Footer() {
                 <Youtube className="w-5 h-5 md:w-6 md:h-6 hover:text-emerald-400 cursor-pointer transition-colors" />
               </div>
             </div>
+          </div>
+        </div>
 
             <div>
               <h4 className="text-white font-semibold mb-4 text-base md:text-lg">Platform</h4>
@@ -27,6 +29,8 @@ export default function Footer() {
                 <li><a href="#" className="hover:text-emerald-400 transition-colors">Role Prep</a></li>
               </ul>
             </div>
+            <p className="text-gray-400 text-sm md:text-base">Master your tech interviews with AI </p>
+          </div>
 
             <div>
               <h4 className="text-white font-semibold mb-4 text-base md:text-lg">Company</h4>

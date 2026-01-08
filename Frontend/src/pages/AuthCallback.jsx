@@ -2,20 +2,22 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const API_URL = import.meta.env.VITE_API_URL;
-
+const API_URL_LOGIN = 'https://intervyo.onrender.com';
+// const API_URL = 'http://localhost:5000';
 export default function AuthCallback() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`${API_URL}/api/auth/me`, {
+    fetch(`${API_URL_LOGIN}/api/auth/me`, {
       credentials: 'include', // REQUIRED for cookies
     })
       .then((res) => {
+        console.log("res : ",res)
         if (!res.ok) throw new Error('Not authenticated');
         return res.json();
       })
       .then((data) => {
+        console.log("Data : ",data)
         localStorage.setItem('user', JSON.stringify(data.user));
         navigate('/dashboard');
       })
